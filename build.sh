@@ -59,7 +59,7 @@ rm -rf ../pkg
 mkdir ../pkg
 fpm -e -t deb -s dir -C /tmp/buildroot \
 -p ../pkg/munin-node-VERSION_ARCH.deb \
--n munin-node -v ${version} \
+-n munin-node -v ${version}~${lsb_codename} \
 --after-install ../munin-node.postinst \
 --after-remove ../munin-node.postrm \
 --depends libnet-server-perl \
