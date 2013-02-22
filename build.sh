@@ -2,6 +2,7 @@
 
 # This is ugly. I should write something to do this.
 
+lsb_codename=`lsb_release --codename --short`
 version="2.0.11.1"
 iteration="1"
 buildroot="/tmp/buildroot"
