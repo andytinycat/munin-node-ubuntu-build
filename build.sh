@@ -54,6 +54,8 @@ mkdir -p ${buildroot}/etc/logrotate.d
 cp ../munin-node.logrotate ${buildroot}/etc/logrotate.d/munin-node
 
 # Package up with fpm
+rm -rf ../pkg
+mkdir ../pkg
 fpm -e -t deb -s dir -C /tmp/buildroot \
 -p ../pkg/munin-node-VERSION_ARCH.deb \
 -n munin-node -v ${version} \
